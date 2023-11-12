@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback Form </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            margin: 0px;
+            background: #1d2026;
+            
+
+        }
+
+        header {
+
+            width: 100%;
+            background-color: #23242a;
+            color: #2b2121;
+            height: 80px;
+            position: fixed;
+            top: 0px;
+            display: flex;
+
+        }
+
+        header .left {
+            display: flex;
+            width: 70%;
+        }
+
+        header .left .left-left {
+
+            width: 50%;
+
+        }
+
+        header .left .left-left p {
+            font-size: 20px;
+            color: wheat;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+
+
+        }
+
+        header .left .left-right {
+            text-align: center;
+            width: 40%;
+
+        }
+
+        header .left .left-right p {
+            color: wheat;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+
+        }
+
+        header .right {
+            display: flex;
+            justify-content: end;
+            width: 30%;
+            height: 80px;
+        }
+
+        header .left p {
+
+            color: whitesmoke;
+
+        }
+
+
+        header .right img {
+            width: 100px;
+            height: 80px;
+        }
+
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            padding-left: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+            background: transparent;
+
+        }
+
+        button[type="home"] {
+            padding: 10px 20px;
+            background-color: #992B2B;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 7%;
+            margin-left: 2%;
+
+
+
+        }
+
+        button[type="home"]:hover {
+            background-color: #e6acad;
+
+
+        }
+
+        .feedback-card {
+            max-width: 750px;
+            margin: 15px auto;
+            padding: 20px;
+            background: rgb(238, 174, 202);
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+
+            padding: 10px 20px;
+            background-color: #992B2B;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        button[type="submit"]:hover {
+            background-color: #e6acad;
+        }
+
+
+        /* CSS for footer */
+
+        .footer {
+            bottom: 0px;
+            background: #23242a;
+            padding: 10px;
+            font-family: 'play', san-serif;
+            text-align: center;
+            display: flex;
+            height: 30px;
+            position: fixed;
+        }
+
+
+        .footer.footer {
+            width: 100%;
+            margin: 0% 0%;
+            padding: 0.6%;
+            font-size: 0.4em;
+
+        }
+
+        .footer ul {
+            width: 100%;
+        }
+
+        .footer li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        .footer li a {
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 0px 30px;
+            color: wheat;
+            text-decoration: none;
+        }
+
+        .footer li a:hover {
+            color: black;
+            transition: all 0.4s ease 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <div class="left-left">
+                <p>ONGC</p>
+            </div>
+            <div class="left-right">
+                <p>TEXT EXTRACTOR</p>
+            </div>
+        </div>
+        <div class="right">
+            <a href="https://ibb.co/Fxdmm1t"><img src="https://i.ibb.co/kHP55TF/logo.jpg" alt="logo"></a>
+
+        </div>
+    </header>
+    <div>
+        <button type="home"id="homepageButton">Home Page</button>
+    </div>
+    <div class="feedback-card">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name"><b>Name:</b></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><B>Email:</B></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message"><B>Message:</B></label>
+                <textarea id="message" name="message" rows="10" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <ul>
+
+                <li> <a href="/contact">Contact Us</a></li>
+                <li> <a href="/softwareguide">Software Guide</a></li>
+                <li> <a href="/developersdetails">Developer Details</a></li>
+                <li> <a href="/about">About Us </a></li>
+                <li> <a href="/feedback">Feedback Form</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Send form data to server (you can modify this part to send the data to your server)
+            var formData = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Display success message
+            alert("Thank you for your feedback!");
+
+            // Clear form fields
+            document.getElementById("feedbackForm").reset();
+        });
+
+
+        // Get the button element by its ID
+        const homepageButton = document.getElementById('homepageButton');
+
+        // Function to handle the button click event
+        function goToHomepage() {
+
+            const homepageURL = "{{url_for('index')}}";
+            // Redirect the user to the homepage
+            window.location.href = homepageURL;
+        }
+
+        // Add a click event listener to the button, which will call the goToHomepage function when clicked
+        homepageButton.addEventListener('click', goToHomepage);
+
+
+    </script>
+
+
+</body>
+
+</html>

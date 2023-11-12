@@ -1,0 +1,230 @@
+#image-container {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+#text-container {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px;
+}
+
+index{
+    text-align: center; 
+    font-weight: bold;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+    background: #1d2026;
+
+
+}
+
+
+
+
+
+header{
+    
+    width: 100%;
+    background-color:#23242a;
+    color: #2b2121;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    
+}
+header .left{
+    display: flex;
+    width: 70%;
+}
+header .left .left-left{
+
+    width: 50%;
+    
+}
+
+header .left .left-left p{
+    font-size: 20px;
+    color: wheat;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+
+
+}
+header .left .left-right{
+    text-align: center;
+    width: 40%;
+    
+}
+
+header .left .left-right p{
+    color: wheat;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+}
+header .right{
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    height: 80px;
+}
+header .left p{
+    
+    color: whitesmoke;
+    
+}
+header .right img{
+    width: 100px;
+    height: 80px;
+}
+
+
+#page {
+    padding-bottom: 40px;
+
+}
+
+/*CSS for Container*/
+.container {
+    display: flex;
+
+
+
+}
+
+.panel {
+    float: left;
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    left: 90px;
+    top: 150px;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+     /* Allow vertical resizing */
+     resize:both;
+     overflow: auto;
+
+}
+
+.panel p {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding-left: 30%;
+    padding-top: 30%;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+}
+
+input[type="file"] {
+    padding-bottom: 154%;
+    padding-left:5%;
+    margin-left: 0;
+    display: none;
+
+}
+
+ label {
+    display: block;
+    background-color: #992B2B;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    width: 130px;
+    padding: 8px 0;
+    border-radius: 5px;
+    margin: auto;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+
+}
+
+.panel2 {
+    float: left;
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    right: 90px;
+    top: 150px;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    box-shadow: inset 3px 4px 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    resize: both;
+    overflow: auto;
+}
+
+.panel2 p {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    padding-left: 35%;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+/* CSS for footer */
+
+.footer {
+    bottom: 0px;
+    background:  #23242a;
+    padding: 10px;
+    font-family: 'play', san-serif;
+    text-align: center;
+    display: flex;
+    height: 30px;
+    position: fixed;
+}
+
+
+.footer.footer {
+    width: 100%;
+    margin: 0% 0%;
+    padding: 0.6%;
+    font-size: 0.4em;
+
+}
+
+.footer ul {
+    width: 100%;
+}
+
+.footer li {
+    display: inline-block;
+    list-style: none;
+}
+
+.footer li a {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0px 30px;
+    color: wheat;
+    text-decoration: none;
+}
+
+.footer li a:hover {
+    color: black;
+    transition: all 0.4s ease 0s;
+}
+
+.autocorrect {
+    background-color: yellow;
+    font-weight: bold;
+}
